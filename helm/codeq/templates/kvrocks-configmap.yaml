@@ -10,4 +10,6 @@ data:
     bind 0.0.0.0
     port {{ .Values.kvrocks.service.port }}
     dir /var/lib/kvrocks
+    log-dir /tmp
+    log-level info
 {{- end }}

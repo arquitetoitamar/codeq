@@ -25,7 +25,10 @@ spec:
           ports:
             - name: kvrocks
               containerPort: {{ .Values.kvrocks.service.port }}
+          command:
+            - kvrocks
           args:
+            - -c
             - /etc/kvrocks/kvrocks.conf
           volumeMounts:
             - name: kvrocks-config
